@@ -1,0 +1,31 @@
+{
+    "problem_type": "regression",
+    "modelVersion": "1",
+    "target_feature": "SOLD PRICE",
+    "n_components": 0,
+    "train_features": [
+        "AGE",
+        "AUCTION YEAR",
+        "AVE",
+        "AVE-BL",
+        "BASE PRICE",
+        "CAPTAINCY EXP",
+        "ECON",
+        "HS",
+        "ODI-RUNS-S",
+        "ODI-SR-B",
+        "ODI-SR-BL",
+        "ODI-WKTS",
+        "PLAYING ROLE",
+        "RUNS-C",
+        "RUNS-S",
+        "SIXERS",
+        "SR-B",
+        "SR-BL",
+        "T-RUNS",
+        "T-WKTS",
+        "TEAM",
+        "WKTS"
+    ],
+    "targetPath": "AI0014"
+}

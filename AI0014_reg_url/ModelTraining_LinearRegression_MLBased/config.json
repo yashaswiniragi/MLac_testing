@@ -1,0 +1,50 @@
+{
+    "problem_type": "regression",
+    "modelVersion": "1",
+    "target_feature": "SOLD PRICE",
+    "train_ratio": 0.8,
+    "optimization_param": {
+        "iterations": 100,
+        "trainTestCVSplit": 5,
+        "geneticparams": {
+            "n_population": 50,
+            "crossover_proba": 0.5,
+            "mutation_proba": 0.2,
+            "crossover_independent_proba": 0.5,
+            "mutation_independent_proba": 0.05,
+            "tournament_size": 3,
+            "n_gen_no_change": 10
+        }
+    },
+    "train_features": [
+        "AGE",
+        "AUCTION YEAR",
+        "AVE",
+        "AVE-BL",
+        "BASE PRICE",
+        "CAPTAINCY EXP",
+        "ECON",
+        "HS",
+        "ODI-RUNS-S",
+        "ODI-SR-B",
+        "ODI-SR-BL",
+        "ODI-WKTS",
+        "PLAYING ROLE",
+        "RUNS-C",
+        "RUNS-S",
+        "SIXERS",
+        "SR-B",
+        "SR-BL",
+        "T-RUNS",
+        "T-WKTS",
+        "TEAM",
+        "WKTS"
+    ],
+    "scoring_criteria": "r2",
+    "algorithms": {
+        "LinearRegression": {
+            "fit_intercept": true
+        }
+    },
+    "targetPath": "AI0014"
+}

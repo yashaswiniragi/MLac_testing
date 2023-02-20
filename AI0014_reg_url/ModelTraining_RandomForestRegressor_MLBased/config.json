@@ -1,0 +1,90 @@
+{
+    "problem_type": "regression",
+    "modelVersion": "1",
+    "target_feature": "SOLD PRICE",
+    "train_ratio": 0.8,
+    "optimization_param": {
+        "iterations": 100,
+        "trainTestCVSplit": 5,
+        "geneticparams": {
+            "n_population": 50,
+            "crossover_proba": 0.5,
+            "mutation_proba": 0.2,
+            "crossover_independent_proba": 0.5,
+            "mutation_independent_proba": 0.05,
+            "tournament_size": 3,
+            "n_gen_no_change": 10
+        }
+    },
+    "train_features": [
+        "AGE",
+        "AUCTION YEAR",
+        "AVE",
+        "AVE-BL",
+        "BASE PRICE",
+        "CAPTAINCY EXP",
+        "ECON",
+        "HS",
+        "ODI-RUNS-S",
+        "ODI-SR-B",
+        "ODI-SR-BL",
+        "ODI-WKTS",
+        "PLAYING ROLE",
+        "RUNS-C",
+        "RUNS-S",
+        "SIXERS",
+        "SR-B",
+        "SR-BL",
+        "T-RUNS",
+        "T-WKTS",
+        "TEAM",
+        "WKTS"
+    ],
+    "scoring_criteria": "r2",
+    "algorithms": {
+        "RandomForestRegressor": {
+            "n_estimators": [
+                100
+            ],
+            "max_depth": [
+                32
+            ],
+            "min_samples_split": [
+                0.1,
+                0.12222222222222223,
+                0.14444444444444443,
+                0.16666666666666666,
+                0.18888888888888888,
+                0.2111111111111111,
+                0.2333333333333333,
+                0.25555555555555554,
+                0.2777777777777778,
+                0.3
+            ],
+            "min_samples_leaf": [
+                0.01,
+                0.025555555555555554,
+                0.041111111111111105,
+                0.056666666666666664,
+                0.07222222222222222,
+                0.08777777777777776,
+                0.10333333333333332,
+                0.11888888888888886,
+                0.13444444444444442,
+                0.15
+            ],
+            "max_features": [
+                0.33
+            ],
+            "max_samples": [
+                0.8,
+                0.9,
+                1.0
+            ],
+            "random_state": [
+                42
+            ]
+        }
+    },
+    "targetPath": "AI0014"
+}

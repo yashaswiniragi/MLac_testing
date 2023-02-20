@@ -1,0 +1,109 @@
+{
+    "problem_type": "regression",
+    "modelVersion": "1",
+    "target_feature": "SOLD PRICE",
+    "train_ratio": 0.8,
+    "optimization_param": {
+        "iterations": 100,
+        "trainTestCVSplit": 5,
+        "geneticparams": {
+            "n_population": 50,
+            "crossover_proba": 0.5,
+            "mutation_proba": 0.2,
+            "crossover_independent_proba": 0.5,
+            "mutation_independent_proba": 0.05,
+            "tournament_size": 3,
+            "n_gen_no_change": 10
+        }
+    },
+    "train_features": [
+        "AGE",
+        "AUCTION YEAR",
+        "AVE",
+        "AVE-BL",
+        "BASE PRICE",
+        "CAPTAINCY EXP",
+        "ECON",
+        "HS",
+        "ODI-RUNS-S",
+        "ODI-SR-B",
+        "ODI-SR-BL",
+        "ODI-WKTS",
+        "PLAYING ROLE",
+        "RUNS-C",
+        "RUNS-S",
+        "SIXERS",
+        "SR-B",
+        "SR-BL",
+        "T-RUNS",
+        "T-WKTS",
+        "TEAM",
+        "WKTS"
+    ],
+    "scoring_criteria": "r2",
+    "algorithms": {
+        "CatBoostRegressor": {
+            "logging_level": [
+                "Silent"
+            ],
+            "loss_function": [
+                "RMSE",
+                "MAE"
+            ],
+            "iterations": [
+                100,
+                125,
+                150
+            ],
+            "depth": [
+                6,
+                7,
+                8,
+                9
+            ],
+            "l2_leaf_reg": [
+                0.01,
+                0.027825594022071243,
+                0.0774263682681127,
+                0.21544346900318834,
+                0.5994842503189409,
+                1.6681005372000592,
+                4.6415888336127775,
+                12.915496650148826,
+                35.93813663804626,
+                100.0
+            ],
+            "subsample": [
+                0.7,
+                0.7999999999999999,
+                0.9,
+                1.0
+            ],
+            "random_strength": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19
+            ],
+            "allow_writing_files": [
+                false
+            ]
+        }
+    },
+    "targetPath": "AI0014"
+}

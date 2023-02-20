@@ -1,0 +1,31 @@
+{
+    "problem_type": "regression",
+    "modelVersion": "1",
+    "target_feature": "SOLD PRICE",
+    "selected_features": [
+        "AGE",
+        "TEAM",
+        "PLAYING ROLE",
+        "T-RUNS",
+        "T-WKTS",
+        "ODI-RUNS-S",
+        "ODI-SR-B",
+        "ODI-WKTS",
+        "ODI-SR-BL",
+        "CAPTAINCY EXP",
+        "RUNS-S",
+        "HS",
+        "AVE",
+        "SR-B",
+        "SIXERS",
+        "RUNS-C",
+        "WKTS",
+        "AVE-BL",
+        "ECON",
+        "SR-BL",
+        "AUCTION YEAR",
+        "BASE PRICE",
+        "SOLD PRICE"
+    ],
+    "targetPath": "AI0014"
+}

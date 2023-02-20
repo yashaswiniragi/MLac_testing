@@ -1,0 +1,51 @@
+name: gh-acr-AI0014_reg_url
+on: 
+  push:
+    branches: main
+    paths: AI0014_reg_url/**
+  workflow_dispatch:
+jobs:
+  gh-acr-build-push:
+    runs-on: ubuntu-latest 
+    steps:
+    - name: 'checkout action'
+      uses: actions/checkout@main
+    
+    - name: 'azure login'
+      uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+    
+    - name: 'build and push image'
+      uses: azure/docker-login@v1
+      with:
+        login-server: ${{ secrets.REGISTRY_LOGIN_SERVER }}
+        username: ${{ secrets.REGISTRY_USERNAME }}
+        password: ${{ secrets.REGISTRY_PASSWORD }}
+    - run:  |
+        docker build ./AI0014_reg_url/ModelMonitoring -t ${{ secrets.REGISTRY_LOGIN_SERVER }}/modelmonitoring:AI0014_reg_url
+        docker push ${{ secrets.REGISTRY_LOGIN_SERVER }}/modelmonitoring:AI0014_reg_url
+        docker build ./AI0014_reg_url/DataIngestion -t ${{ secrets.REGISTRY_LOGIN_SERVER }}/dataingestion:AI0014_reg_url
+        docker push ${{ secrets.REGISTRY_LOGIN_SERVER }}/dataingestion:AI0014_reg_url		
+        docker build ./AI0014_reg_url/DataTransformation -t ${{ secrets.REGISTRY_LOGIN_SERVER }}/datatransformation:AI0014_reg_url
+        docker push ${{ secrets.REGISTRY_LOGIN_SERVER }}/datatransformation:AI0014_reg_url
+        docker build ./AI0014_reg_url/FeatureEngineering -t ${{ secrets.REGISTRY_LOGIN_SERVER }}/featureengineering:AI0014_reg_url
+        docker push ${{ secrets.REGISTRY_LOGIN_SERVER }}/featureengineering:AI0014_reg_url
+        docker build ./AI0014_reg_url/ModelRegistry -t ${{ secrets.REGISTRY_LOGIN_SERVER }}/modelregistry:AI0014_reg_url
+        docker push ${{ secrets.REGISTRY_LOGIN_SERVER }}/modelregistry:AI0014_reg_url		
+        docker build ./AI0014_reg_url/ModelServing -t ${{ secrets.REGISTRY_LOGIN_SERVER }}/modelserving:AI0014_reg_url
+        docker push ${{ secrets.REGISTRY_LOGIN_SERVER }}/modelserving:AI0014_reg_url		
+        docker build ./AI0014_reg_url/ModelTraining_CatBoostRegressor_MLBased -t ${{ secrets.REGISTRY_LOGIN_SERVER }}/modeltraining_catboostregressor_mlbased:AI0014_reg_url
+        docker push ${{ secrets.REGISTRY_LOGIN_SERVER }}/modeltraining_catboostregressor_mlbased:AI0014_reg_url
+        docker build ./AI0014_reg_url/ModelTraining_Lasso_MLBased -t ${{ secrets.REGISTRY_LOGIN_SERVER }}/modeltraining_lasso_mlbased:AI0014_reg_url
+        docker push ${{ secrets.REGISTRY_LOGIN_SERVER }}/modeltraining_lasso_mlbased:AI0014_reg_url
+        docker build ./AI0014_reg_url/ModelTraining_LGBMRegressor_MLBased -t ${{ secrets.REGISTRY_LOGIN_SERVER }}/modeltraining_lgbmregressor_mlbased:AI0014_reg_url
+        docker push ${{ secrets.REGISTRY_LOGIN_SERVER }}/modeltraining_lgbmregressor_mlbased:AI0014_reg_url
+        docker build ./AI0014_reg_url/ModelTraining_LinearRegression_MLBased -t ${{ secrets.REGISTRY_LOGIN_SERVER }}/modeltraining_linearregression_mlbased:AI0014_reg_url
+        docker push ${{ secrets.REGISTRY_LOGIN_SERVER }}/modeltraining_linearregression_mlbased:AI0014_reg_url
+        docker build ./AI0014_reg_url/ModelTraining_RandomForestRegressor_MLBased -t ${{ secrets.REGISTRY_LOGIN_SERVER }}/modeltraining_randomforestregressor_mlbased:AI0014_reg_url
+        docker push ${{ secrets.REGISTRY_LOGIN_SERVER }}/modeltraining_randomforestregressor_mlbased:AI0014_reg_url
+        docker build ./AI0014_reg_url/ModelTraining_Ridge_MLBased -t ${{ secrets.REGISTRY_LOGIN_SERVER }}/modeltraining_ridge_mlbased:AI0014_reg_url
+        docker push ${{ secrets.REGISTRY_LOGIN_SERVER }}/modeltraining_ridge_mlbased:AI0014_reg_url
+        docker build ./AI0014_reg_url/ModelTraining_XGBRegressor_MLBased -t ${{ secrets.REGISTRY_LOGIN_SERVER }}/modeltraining_xgbregressor_mlbased:AI0014_reg_url
+        docker push ${{ secrets.REGISTRY_LOGIN_SERVER }}/modeltraining_xgbregressor_mlbased:AI0014_reg_url

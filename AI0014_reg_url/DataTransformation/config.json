@@ -1,0 +1,416 @@
+{
+    "problem_type": "regression",
+    "modelVersion": "1",
+    "target_feature": "SOLD PRICE",
+    "profiler": {
+        "featureDict": [
+            {
+                "feature": "AGE",
+                "type": "numerical",
+                "fillMethod": "median",
+                "categoryEncoding": "na",
+                "outlier": "disable",
+                "outlierOperation": "nochange",
+                "normalization": "none"
+            },
+            {
+                "feature": "TEAM",
+                "type": "categorical",
+                "fillMethod": "mode",
+                "categoryEncoding": "targetEncoding",
+                "outlier": "disable",
+                "outlierOperation": "nochange",
+                "normalization": "none"
+            },
+            {
+                "feature": "PLAYING ROLE",
+                "type": "categorical",
+                "fillMethod": "mode",
+                "categoryEncoding": "targetEncoding",
+                "outlier": "disable",
+                "outlierOperation": "nochange",
+                "normalization": "none"
+            },
+            {
+                "feature": "T-RUNS",
+                "type": "numerical",
+                "fillMethod": "median",
+                "categoryEncoding": "na",
+                "outlier": "disable",
+                "outlierOperation": "nochange",
+                "normalization": "none"
+            },
+            {
+                "feature": "T-WKTS",
+                "type": "numerical",
+                "fillMethod": "median",
+                "categoryEncoding": "na",
+                "outlier": "disable",
+                "outlierOperation": "nochange",
+                "normalization": "none"
+            },
+            {
+                "feature": "ODI-RUNS-S",
+                "type": "numerical",
+                "fillMethod": "median",
+                "categoryEncoding": "na",
+                "outlier": "disable",
+                "outlierOperation": "nochange",
+                "normalization": "none"
+            },
+            {
+                "feature": "ODI-SR-B",
+                "type": "numerical",
+                "fillMethod": "median",
+                "categoryEncoding": "na",
+                "outlier": "disable",
+                "outlierOperation": "nochange",
+                "normalization": "none"
+            },
+            {
+                "feature": "ODI-WKTS",
+                "type": "numerical",
+                "fillMethod": "median",
+                "categoryEncoding": "na",
+                "outlier": "disable",
+                "outlierOperation": "nochange",
+                "normalization": "none"
+            },
+            {
+                "feature": "ODI-SR-BL",
+                "type": "numerical",
+                "fillMethod": "median",
+                "categoryEncoding": "na",
+                "outlier": "disable",
+                "outlierOperation": "nochange",
+                "normalization": "none"
+            },
+            {
+                "feature": "CAPTAINCY EXP",
+                "type": "numerical",
+                "fillMethod": "median",
+                "categoryEncoding": "na",
+                "outlier": "disable",
+                "outlierOperation": "nochange",
+                "normalization": "none"
+            },
+            {
+                "feature": "RUNS-S",
+                "type": "numerical",
+                "fillMethod": "median",
+                "categoryEncoding": "na",
+                "outlier": "disable",
+                "outlierOperation": "nochange",
+                "normalization": "none"
+            },
+            {
+                "feature": "HS",
+                "type": "numerical",
+                "fillMethod": "median",
+                "categoryEncoding": "na",
+                "outlier": "disable",
+                "outlierOperation": "nochange",
+                "normalization": "none"
+            },
+            {
+                "feature": "AVE",
+                "type": "numerical",
+                "fillMethod": "median",
+                "categoryEncoding": "na",
+                "outlier": "disable",
+                "outlierOperation": "nochange",
+                "normalization": "none"
+            },
+            {
+                "feature": "SR-B",
+                "type": "numerical",
+                "fillMethod": "median",
+                "categoryEncoding": "na",
+                "outlier": "disable",
+                "outlierOperation": "nochange",
+                "normalization": "none"
+            },
+            {
+                "feature": "SIXERS",
+                "type": "numerical",
+                "fillMethod": "median",
+                "categoryEncoding": "na",
+                "outlier": "disable",
+                "outlierOperation": "nochange",
+                "normalization": "none"
+            },
+            {
+                "feature": "RUNS-C",
+                "type": "numerical",
+                "fillMethod": "median",
+                "categoryEncoding": "na",
+                "outlier": "disable",
+                "outlierOperation": "nochange",
+                "normalization": "none"
+            },
+            {
+                "feature": "WKTS",
+                "type": "numerical",
+                "fillMethod": "median",
+                "categoryEncoding": "na",
+                "outlier": "disable",
+                "outlierOperation": "nochange",
+                "normalization": "none"
+            },
+            {
+                "feature": "AVE-BL",
+                "type": "numerical",
+                "fillMethod": "median",
+                "categoryEncoding": "na",
+                "outlier": "disable",
+                "outlierOperation": "nochange",
+                "normalization": "none"
+            },
+            {
+                "feature": "ECON",
+                "type": "numerical",
+                "fillMethod": "median",
+                "categoryEncoding": "na",
+                "outlier": "disable",
+                "outlierOperation": "nochange",
+                "normalization": "none"
+            },
+            {
+                "feature": "SR-BL",
+                "type": "numerical",
+                "fillMethod": "median",
+                "categoryEncoding": "na",
+                "outlier": "disable",
+                "outlierOperation": "nochange",
+                "normalization": "none"
+            },
+            {
+                "feature": "AUCTION YEAR",
+                "type": "numerical",
+                "fillMethod": "median",
+                "categoryEncoding": "na",
+                "outlier": "disable",
+                "outlierOperation": "nochange",
+                "normalization": "none"
+            },
+            {
+                "feature": "BASE PRICE",
+                "type": "numerical",
+                "fillMethod": "median",
+                "categoryEncoding": "na",
+                "outlier": "disable",
+                "outlierOperation": "nochange",
+                "normalization": "none"
+            },
+            {
+                "feature": "SOLD PRICE",
+                "type": "numerical",
+                "fillMethod": "median",
+                "categoryEncoding": "na",
+                "outlier": "disable",
+                "outlierOperation": "nochange",
+                "normalization": "none"
+            }
+        ],
+        "numericalFillMethod": {
+            "Median": "True",
+            "Mean": "False",
+            "KNNImputer": "False",
+            "Max": "False",
+            "Min": "False",
+            "Zero": "False",
+            "Drop": "False"
+        },
+        "categoricalFillMethod": {
+            "Mode": "True",
+            "Zero": "False",
+            "Drop": "False",
+            "MostFrequent": "False"
+        },
+        "categoryEncoding": {
+            "TargetEncoding": "True",
+            "OneHotEncoding": "False",
+            "LabelEncoding": "False"
+        },
+        "outlierDetection": {
+            "IQR": "False",
+            "ZSCORE": "False",
+            "IsolationForest": "False",
+            "oneClassSVM": "False",
+            "HalfSpaceTrees": "False"
+        },
+        "deBiasing": {
+            "FeatureName": "None",
+            "ClassName": "None",
+            "Algorithm": "DIR",
+            "TargetFeature": "SOLD PRICE"
+        },
+        "outlierDetectionStatus": "False",
+        "outlierDetectionMethod": "None",
+        "misValueRatio": "0.8",
+        "categoricalToNumeric": "True",
+        "categoryMaxLabel": "20",
+        "numericFeatureRatio": "0.7",
+        "bucketing": "False",
+        "num_of_quantiles": "5",
+        "normalization": {
+            "standardScaler": "False",
+            "minMax": "False",
+            "logNormal": "False",
+            "maxAbsScaler": "False"
+        },
+        "removeDuplicate": "True",
+        "targetEncodingParams": {
+            "how": {
+                "Mean": "True",
+                "Bayesian Mean": "False"
+            }
+        },
+        "outlierDetectionParams": {
+            "Half space trees": {
+                "n_trees": "5",
+                "height": "3",
+                "window_size": "2",
+                "q": "0.99"
+            },
+            "OneClassSVM": {
+                "nu": "0.2",
+                "q": "0.99"
+            }
+        },
+        "textCleaning": {
+            "removeNoise": "False",
+            "removeNoiseConfig": {
+                "decodeHTML": "False",
+                "removeHyperLinks": "False",
+                "removeMentions": "False",
+                "removeHashtags": "False",
+                "removeEmoji": "False",
+                "unicodeToAscii": "False",
+                "removeNonAscii": "False"
+            },
+            "expandContractions": "False",
+            "normalize": "False",
+            "normalizeMethod": {
+                "lemmatization": "True",
+                "stemming": "False"
+            },
+            "replaceAcronym": "False",
+            "acronymConfig": {
+                "acronymDict": "None"
+            },
+            "correctSpelling": "False",
+            "removeStopwords": "True",
+            "stopWordsConfig": {
+                "extend": "False",
+                "replace": "False",
+                "stopwordsList": "[]"
+            },
+            "removePunctuation": "True",
+            "removePunctuationConfig": {
+                "removePuncWithinTokens": "True"
+            },
+            "removeNumericTokens": "True",
+            "removeNumericConfig": {
+                "removeNumeric_IncludeSpecialCharacters": "True"
+            },
+            "libConfig": {
+                "tokenizationLib": {
+                    "nltk": "True",
+                    "textblob": "False",
+                    "spacy": "False",
+                    "keras": "False",
+                    "gensim": "False"
+                },
+                "lemmatizationLib": {
+                    "nltk": "True",
+                    "textblob": "False",
+                    "spacy": "False"
+                },
+                "stopwordsRemovalLib": {
+                    "nltk": "True",
+                    "spacy": "False",
+                    "gensim": "False"
+                }
+            }
+        },
+        "textFeatureExtraction": {
+            "n_grams": "False",
+            "n_grams_config": {
+                "min_n": 1,
+                "max_n": 1
+            },
+            "pos_tags": "False",
+            "pos_tags_lib": {
+                "nltk": "True",
+                "textblob": "False",
+                "spacy": "False"
+            },
+            "keywordsExtraction": "False",
+            "keywordsExtraction_config": {
+                "ratio": 0.2,
+                "words": "None",
+                "scores": "False",
+                "pos_filter": "NN,JJ",
+                "lemmatize": "False"
+            },
+            "shallowParsing": "False",
+            "shallowParsing_lib": {
+                "spacy": "True",
+                "textblob": "False",
+                "nltk": "False"
+            },
+            "namedEntityRecognition": "False"
+        },
+        "textConversionMethod": {
+            "TF_IDF": "True",
+            "CountVectors": "False",
+            "Word2Vec": "False",
+            "FastText": "False",
+            "Glove": "False",
+            "SentenceTransformer": "False"
+        },
+        "embeddingSize": {
+            "Glove": {
+                "default": "True",
+                "100d": "False",
+                "200d": "False",
+                "300d": "False"
+            },
+            "FastText": {
+                "default": "True"
+            },
+            "TF_IDF": {
+                "maxFeatures": "2000",
+                "dimensions": "500"
+            }
+        }
+    },
+    "train_ratio": 0.8,
+    "train_features": [
+        "AGE",
+        "AUCTION YEAR",
+        "AVE",
+        "AVE-BL",
+        "BASE PRICE",
+        "CAPTAINCY EXP",
+        "ECON",
+        "HS",
+        "ODI-RUNS-S",
+        "ODI-SR-B",
+        "ODI-SR-BL",
+        "ODI-WKTS",
+        "PLAYING ROLE",
+        "RUNS-C",
+        "RUNS-S",
+        "SIXERS",
+        "SR-B",
+        "SR-BL",
+        "T-RUNS",
+        "T-WKTS",
+        "TEAM",
+        "WKTS"
+    ],
+    "text_features": [],
+    "targetPath": "AI0014"
+}

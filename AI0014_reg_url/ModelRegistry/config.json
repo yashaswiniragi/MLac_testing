@@ -1,0 +1,14 @@
+{
+    "problem_type": "regression",
+    "modelVersion": "1",
+    "targetPath": "AI0014",
+    "models": [
+        "LinearRegression_MLBased",
+        "Lasso_MLBased",
+        "Ridge_MLBased",
+        "RandomForestRegressor_MLBased",
+        "XGBRegressor_MLBased",
+        "LGBMRegressor_MLBased",
+        "CatBoostRegressor_MLBased"
+    ]
+}
