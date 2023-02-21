@@ -1,0 +1,8 @@
+{
+    "problem_type": "timeseries",
+    "modelVersion": "1",
+    "targetPath": "AI0017",
+    "models": [
+        "LSTM"
+    ]
+}

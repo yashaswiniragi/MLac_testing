@@ -1,0 +1,11 @@
+{
+    "problem_type": "timeseries",
+    "modelVersion": "1",
+    "target_feature": [
+        "MemoryUtilizationAvg",
+        "CPUUtilizationAvg",
+        "DiskUtilizationAvg"
+    ],
+    "n_components": 0,
+    "targetPath": "AI0017"
+}

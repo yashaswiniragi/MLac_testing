@@ -1,0 +1,19 @@
+{
+    "problem_type": "timeseries",
+    "modelVersion": "1",
+    "dataLocation": "https://aion-data.s3.ap-south-1.amazonaws.com/tsset5.csv",
+    "target_feature": [
+        "MemoryUtilizationAvg",
+        "CPUUtilizationAvg",
+        "DiskUtilizationAvg"
+    ],
+    "selected_features": [
+        "MemoryUtilizationAvg",
+        "CPUUtilizationAvg",
+        "DiskUtilizationAvg"
+    ],
+    "dateTimeFeature": [
+        "Period1"
+    ],
+    "targetPath": "AI0017"
+}

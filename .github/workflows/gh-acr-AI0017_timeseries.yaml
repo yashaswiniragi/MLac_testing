@@ -1,0 +1,39 @@
+name: gh-acr-AI0017_timeseries
+on: 
+  push:
+    branches: main
+    paths: AI0017_timeseries/**
+  workflow_dispatch:
+jobs:
+  gh-acr-build-push:
+    runs-on: ubuntu-latest 
+    steps:
+    - name: 'checkout action'
+      uses: actions/checkout@main
+    
+    - name: 'azure login'
+      uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+    
+    - name: 'build and push image'
+      uses: azure/docker-login@v1
+      with:
+        login-server: ${{ secrets.REGISTRY_LOGIN_SERVER }}
+        username: ${{ secrets.REGISTRY_USERNAME }}
+        password: ${{ secrets.REGISTRY_PASSWORD }}
+    - run:  |
+        docker build ./AI0017_timeseries/ModelMonitoring -t ${{ secrets.REGISTRY_LOGIN_SERVER }}/modelmonitoring:AI0017_timeseries
+        docker push ${{ secrets.REGISTRY_LOGIN_SERVER }}/modelmonitoring:AI0017_timeseries
+        docker build ./AI0017_timeseries/DataIngestion -t ${{ secrets.REGISTRY_LOGIN_SERVER }}/dataingestion:AI0017_timeseries
+        docker push ${{ secrets.REGISTRY_LOGIN_SERVER }}/dataingestion:AI0017_timeseries		
+        docker build ./AI0017_timeseries/DataTransformation -t ${{ secrets.REGISTRY_LOGIN_SERVER }}/datatransformation:AI0017_timeseries
+        docker push ${{ secrets.REGISTRY_LOGIN_SERVER }}/datatransformation:AI0017_timeseries
+        docker build ./AI0017_timeseries/FeatureEngineering -t ${{ secrets.REGISTRY_LOGIN_SERVER }}/featureengineering:AI0017_timeseries
+        docker push ${{ secrets.REGISTRY_LOGIN_SERVER }}/featureengineering:AI0017_timeseries
+        docker build ./AI0017_timeseries/ModelRegistry -t ${{ secrets.REGISTRY_LOGIN_SERVER }}/modelregistry:AI0017_timeseries
+        docker push ${{ secrets.REGISTRY_LOGIN_SERVER }}/modelregistry:AI0017_timeseries		
+        docker build ./AI0017_timeseries/ModelServing -t ${{ secrets.REGISTRY_LOGIN_SERVER }}/modelserving:AI0017_timeseries
+        docker push ${{ secrets.REGISTRY_LOGIN_SERVER }}/modelserving:AI0017_timeseries		
+        docker build ./AI0017_timeseries/ModelTraining_LSTM -t ${{ secrets.REGISTRY_LOGIN_SERVER }}/modeltraining_lstm:AI0017_timeseries
+        docker push ${{ secrets.REGISTRY_LOGIN_SERVER }}/modeltraining_lstm:AI0017_timeseries
